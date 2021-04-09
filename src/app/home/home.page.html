@@ -1,0 +1,48 @@
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Covid ChatBot
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Blank</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+
+  <div class="banner">
+    <div class="navbar">
+      <br>
+      <ul>
+        <li><a href="https://www.moh.gov.my/">Info</a></li>
+        <li><a href="https://www.moh.gov.my/index.php/pages/view/1193">Contact Us</a></li>
+      </ul>
+
+    </div>
+
+    <div class="content">
+      <br>
+      <h1>GET THE LATEST INFO ON CORONAVIRUS </h1>
+      <p>Your fastest reply bots on covid info!</p>
+
+      <div *ngIf="showBot">
+        <iframe  id="myframe" allow="microphone;" width="400" height="430" 
+          src="https://console.dialogflow.com/api-client/demo/embedded/6f03a2d0-9269-4806-b32d-ca1e36a859d5"
+          name="iframe_a"></iframe>
+      </div>
+
+
+      <div class="button">
+        <button ion button onclick (click)="openBot()">{{chattext}}</button>
+      </div>
+
+
+    </div>
+
+  </div>
+</ion-content>
